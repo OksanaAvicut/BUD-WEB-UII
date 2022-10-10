@@ -1,0 +1,738 @@
+/* MENU Configuracao
+**********************************************************/
+.article {
+	float: left;
+	padding: 20px;
+	width: 30%;
+	background-color: #fff;
+	height: 4000px; /* only for demonstration, should be removed */
+  }
+.article1 {
+	float: right;
+	padding: 20px;
+	width:50%;
+	background-color: #fff;
+	height: 4000px;/* only for demonstration, should be removed */
+  }
+.ownmenu {
+	width: 100%;
+	padding: 10;
+	margin: 0;
+	position: relative;
+	float: left;
+	list-style: none;
+}
+.ownmenu li {
+
+	float: left;
+}
+.ownmenu a {
+	-o-transition: all .3s linear;
+	-webkit-transition: all .3s linear;
+	-moz-transition: all .3s linear;
+	transition: all .3s linear;
+	outline: none;
+	z-index: 10;
+}
+
+.header__logo {
+	font-size: 12px;
+	font-weight: 700S;
+	text-transform: uppercase;
+	margin-bottom: auto;
+}
+/* CONFIGURAÇÃO DE SUSPENSÃO
+**********************************************************/
+.inner{
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	margin: 0;
+}
+
+.ownmenu ul.dropdown, .ownmenu ul.dropdown li ul.dropdown {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+	position: absolute;
+	z-index: 99;
+	padding-left: 0px;
+	min-width: 250px;
+	background: none;
+}
+.ownmenu ul.dropdown {
+	top: 61px;
+	z-index: 999999;
+}
+.ownmenu ul.dropdown li ul.dropdown {
+	left: 100%;
+	top: inherit;
+}
+.ownmenu ul.dropdown li {
+	clear: both;
+	width: 100%;
+	text-align: left !important;
+	padding-left: 0px !important;
+}
+.ownmenu ul.dropdown li a {
+	width: 100%;
+	padding: 12px 24px 12px;
+	float: left;
+	clear: both;
+	text-decoration: none;
+	color: #999;
+	text-align: left;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.ownmenu ul.dropdown li > a {
+	margin: 0px;
+}
+.ownmenu ul.dropdown li:hover > a {
+	background: #e0e0e0;
+	color: #555;
+	margin: 0px;
+}
+/*  lista suspensa para o lado esquerdo */
+.ownmenu ul.dropdown li ul.dropdown.left {
+	left: auto;
+	right: 100%;
+}
+/* SUBMENU INDICADORES
+**********************************************************/
+.ownmenu .indicator {
+	position: relative;
+	right: 5px;
+	font-size: 14px;
+	float: right;
+}
+.ownmenu ul li .indicator {
+	font-size: 12px;
+	top: 1px;
+	left: 10px;
+}
+/* MENU
+**********************************************************/
+.ownmenu > li > .megamenu {
+	position: absolute;
+	display: none;
+	background: #fff;
+	width: 25%;
+	top: 80px;
+	font-size: 12px;
+	color: #999;
+	z-index: 99;
+	padding: 0 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* menu list */
+.ownmenu li > .megamenu ul {
+	margin: 0 0 20px 0;
+	float: left;
+	padding: 0;
+	display: block;
+	position: relative;
+}
+.ownmenu li > .megamenu ul li {
+	width: 100%;
+	padding: 0px;
+}
+.ownmenu li > .megamenu ul li.title {
+	margin: 0 0 8px;
+	padding: 0 0 5px;
+	font-size: 14px;
+	border-bottom: solid 1px #666;
+}
+/* menu h5 */
+.ownmenu li > .megamenu h5 {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* menu links */
+.ownmenu li > .megamenu a {
+	color: #999;
+	text-decoration: none;
+	font-size: 12px;
+	-webkit-transition: color 0.3s linear;
+	-moz-transition: color 0.3s linear;
+	-o-transition: color 0.3s linear;
+	transition: color 0.3s linear;
+}
+.ownmenu li > .megamenu a:hover {
+	color: #dedede;
+}
+/* menu imagens */
+.ownmenu .megamenu img {
+	width: 100%;
+	-webkit-transition: border 0.3s linear;
+	-moz-transition: border 0.3s linear;
+	-o-transition: border 0.3s linear;
+	transition: border 0.3s linear;
+}
+/* para corrigir o atributo direito nos submenus (menu alinhado à esquerda (padrão)) */
+.ownmenu > li.fix-sub > .megamenu, .ownmenu > li.fix-sub > .megamenu.half-width, .ownmenu > li.fix-sub > .dropdown {
+	right: 0;
+}
+/* MENU WIDTSH
+**********************************************************/
+.ownmenu > li > .megamenu.half-width {
+	width: 50%;
+}
+.ownmenu > li > .megamenu.full-width {
+	width: 100%;
+	left: 0;
+}
+/* MENU FORM CONFIGURACAO
+**********************************************************/
+.ownmenu li > .megamenu form {
+	width: 100%;
+}
+/* menu ENTRADA */
+.ownmenu li > .megamenu form input[type="text"], .ownmenu li > .megamenu form textarea {
+	padding: 5px;
+	color: #999;
+	background: #444;
+	font-size: 14px;
+	border: solid 1px transparent;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: border 0.3s linear;
+	-moz-transition: border 0.3s linear;
+	-o-transition: border 0.3s linear;
+	transition: border 0.3s linear;
+}
+.ownmenu li > .megamenu form input[type="text"]:focus, .ownmenu li > .megamenu form textarea:focus {
+	border-color: #e0e0e0;
+}
+.ownmenu li > .megamenu form input[type="text"] {
+	width: 100%;
+	margin-top: 10px;
+}
+.ownmenu li > .megamenu form textarea {
+	width: 100%;
+	margin-top: 10px;
+}
+.ownmenu li > .megamenu form input[type="submit"] {
+	width: 25%;
+	float: right;
+	height: 30px;
+	margin-top: 10px;
+	border: none;
+	cursor: pointer;
+	background: #444;
+	color: #777;
+	-webkit-transition: background 0.3s linear;
+	-moz-transition: background 0.3s linear;
+	-o-transition: background 0.3s linear;
+	transition: background 0.3s linear;
+}
+.ownmenu li > .megamenu form input[type="submit"]:hover {
+	background: #e0e0e0;
+	color: #555;
+}
+/* MENU SISTEMA DE REDE
+**********************************************************/
+.megamenu .row {
+	width: 100%;
+	margin-top: 15px;
+}
+.megamenu .row:first-child {
+	margin-top: 0;
+}
+.megamenu .row:before, .megamenu .row:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.megamenu .row:after {
+	clear: both;
+}
+.megamenu .row .col1, .megamenu .row .col2, .megamenu .row .col3, .megamenu .row .col4, .megamenu .row .col5, .megamenu .row .col6 {
+	display: block;
+	width: 100%;
+	min-height: 20px;
+	float: middle;
+	margin-left: 2.127659574468085%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.megamenu .row [class*="col"]:first-child {
+	margin-left: 0;
+}
+.megamenu .row .col1 {
+	width: 14.893617021276595%;
+}
+.megamenu .row .col2 {
+	width: 31.914893617021278%;
+}
+.megamenu .row .col3 {
+	width: 48.93617021276595%;
+}
+.megamenu .row .col4 {
+	width: 65.95744680851064%;
+}
+.megamenu .row .col5 {
+	width: 82.97872340425532%;
+}
+.megamenu .row .col6 {
+	width: 100%;
+}
+/* ALINHAMENTO À DIREITA (ARTIGO DO MENU)
+**********************************************************/
+.ownmenu > li.right {
+	float: right;
+}
+.ownmenu > li.right > .megamenu, .ownmenu > li.right > .megamenu.half-width, .ownmenu > li.right > .dropdown {
+	right: 0;
+}
+/* para corrigir o atributo direito nos submenus (menu alinhado à direita)
+ */
+.ownmenu > li.jsright {
+	float: right;
+}
+.ownmenu > li.jsright.last > .megamenu, .ownmenu > li.jsright.last > .megamenu.half-width, .ownmenu > li.jsright.last > .dropdown {
+	right: 0;
+}
+/* ICONS (FONT)
+**********************************************************/
+.ownmenu > li > a > i {
+	line-height: 23px !important;
+	margin-right: 6px;
+	font-size: 18px;
+	float: left;
+}
+/* MENU DOBRÁVEL
+**********************************************************/
+.ownmenu > li.showhide {
+	display: none;
+	width: 100%;
+	height: 50px;
+	cursor: pointer;
+	color: #999;
+}
+.ownmenu > li.showhide span.title {
+	margin: 15px 0 0 25px;
+	float: left;
+}
+.ownmenu > li.showhide span.icon {
+	margin: 17px 20px;
+	float: right;
+}
+.ownmenu > li.showhide .icon em {
+	margin-bottom: 3px;
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: #999;
+}
+/* LAYOUT RESPONSIVO
+**********************************************************/
+@media (max-width: 767px) {
+.ownmenu > li {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.ownmenu > li > a {
+	padding: 15px 25px;
+}
+.ownmenu a {
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.ownmenu ul.dropdown, .ownmenu ul.dropdown li ul.dropdown {
+	width: 100% !important;
+	left: 0;
+	position: static !important;
+	border: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.ownmenu ul.dropdown li {
+	background: #fff !important;
+	border: none;
+}
+.ownmenu ul.dropdown > li > a {
+	padding-left: 40px !important;
+}
+.ownmenu > li > .megamenu {
+	width: 100% !important;
+	position: static;
+	border-top: none;
+}
+.ownmenu > li > .megamenu .row [class*="col"] {
+	float: none;
+	display: block;
+	width: 100% !important;
+	margin-left: 0;
+	margin-top: 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ownmenu > li > .megamenu .row:first-child [class*="col"]:first-child {
+	margin-top: 0;
+}
+.ownmenu > li > .megamenu .row {
+	margin-top: 0;
+}
+.ownmenu > li > ul.dropdown > li > a {
+	padding-left: 20px !important;
+}
+.ownmenu > li > ul.dropdown > li > ul.dropdown > li > a {
+	padding-left: 60px !important;
+}
+.ownmenu > li > ul.dropdown > li > ul.dropdown > li > ul.dropdown > li > a {
+	padding-left: 80px !important;
+}
+}
+@media (min-width: 767px) and (max-width: 900px) {
+.ownmenu > li > .megamenu {
+	width: 100% !important;
+	left: 0 !important;
+}
+}
+/* MENU configuracao
+**********************************************************/
+.ownmenuclick {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	float: left;
+	list-style: none;
+}
+.ownmenuclick li {
+	
+	float: left;
+	-o-transition: all .3s linear;
+	-webkit-transition: all .3s linear;
+	-moz-transition: all .3s linear;
+	transition: all .3s linear;
+}
+.ownmenuclick a {
+	-o-transition: all .3s linear;
+	-webkit-transition: all .3s linear;
+	-moz-transition: all .3s linear;
+	transition: all .3s linear;
+	outline: none;
+	z-index: 10;
+}
+/* CONFIGURAÇÃO DE SUSPENSÃO
+**********************************************************/
+.ownmenuclick ul.dropdown, .ownmenuclick ul.dropdown li ul.dropdown {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+	position: relative;
+	z-index: 99;
+	padding-left: 0px;
+	min-width: 100%;
+	background: none;
+}
+.ownmenuclick ul.dropdown {
+	top: 0px;
+}
+.ownmenuclick ul.dropdown li ul.dropdown {
+	left: 100%;
+	top: inherit;
+}
+.ownmenuclick ul.dropdown li {
+	clear: both;
+	width: 100%;
+}
+.ownmenuclick ul.dropdown li a {
+	width: 100%;
+	padding: 5px 20px 5px;
+	float: left;
+	clear: both;
+	text-decoration: none;
+	color: #999;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.ownmenuclick ul.dropdown li:hover > a {
+	background: #e0e0e0;
+	color: #555;
+}
+/* dropdowns para o lado esquerdo */
+.ownmenuclick ul.dropdown li ul.dropdown.left {
+	left: auto;
+	right: 100%;
+}
+/* SUBMENU INDICADORES
+**********************************************************/
+.ownmenuclick .indicator {
+	position: relative;
+	right: 5px;
+	font-size: 12px;
+	float: right;
+}
+.ownmenuclick ul li .indicator {
+	font-size: 12px;
+	top: 1px;
+	left: 10px;
+}
+/* MEGAMENU
+**********************************************************/
+.ownmenuclick > li > .megamenu {
+	position: absolute;
+	display: none;
+	background: #fff;
+	width: 25%;
+	top: 80px;
+	font-size: 12px;
+	color: #999;
+	z-index: 99;
+	padding: 0 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* megamenu lista */
+.ownmenuclick li > .megamenu ul {
+	margin: 0 0 20px 0;
+	float: left;
+	padding: 0;
+	display: block;
+	position: relative;
+}
+.ownmenuclick li > .megamenu ul li {
+	width: 100%;
+	padding: 0px;
+}
+.ownmenuclick li > .megamenu ul li.title {
+	margin: 0 0 8px;
+	padding: 0 0 5px;
+	font-size: 14px;
+	border-bottom: solid 1px #666;
+}
+/* megamenu h5 */
+.ownmenuclick li > .megamenu h5 {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* megamenu links */
+.ownmenuclick li > .megamenu a {
+	color: #999;
+	text-decoration: none;
+	font-size: 12px;
+	-webkit-transition: color 0.3s linear;
+	-moz-transition: color 0.3s linear;
+	-o-transition: color 0.3s linear;
+	transition: color 0.3s linear;
+}
+.ownmenuclick li > .megamenu a:hover {
+	color: #dedede;
+}
+/* megamenu images */
+.ownmenuclick .megamenu img {
+	width: 100%;
+	-webkit-transition: border 0.3s linear;
+	-moz-transition: border 0.3s linear;
+	-o-transition: border 0.3s linear;
+	transition: border 0.3s linear;
+}
+/* para corrigir o atributo direito nos submenus (menu alinhado à esquerda (padrão)) */
+.ownmenuclick > li.fix-sub > .megamenu, .ownmenuclick > li.fix-sub > .megamenu.half-width, .ownmenuclick > li.fix-sub > .dropdown {
+	right: 0;
+}
+/* MEGAMENU WIDTHS
+**********************************************************/
+.ownmenuclick > li > .megamenu.half-width {
+	width: 50%;
+}
+.ownmenuclick > li > .megamenu.full-width {
+	width: 100%;
+	left: 0;
+}
+/* MEGAMENU FORM
+**********************************************************/
+.ownmenuclick li > .megamenu form {
+	width: 100%;
+}
+/* megamenu entradas */
+.ownmenuclick li > .megamenu form input[type="text"], .ownmenuclick li > .megamenu form textarea {
+	padding: 5px;
+	color: #999;
+	background: #444;
+	font-size: 14px;
+	border: solid 1px transparent;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: border 0.3s linear;
+	-moz-transition: border 0.3s linear;
+	-o-transition: border 0.3s linear;
+	transition: border 0.3s linear;
+}
+.ownmenuclick li > .megamenu form input[type="text"]:focus, .ownmenuclick li > .megamenu form textarea:focus {
+	border-color: #e0e0e0;
+}
+.ownmenuclick li > .megamenu form input[type="text"] {
+	width: 100%;
+	margin-top: 10px;
+}
+.ownmenuclick li > .megamenu form textarea {
+	width: 100%;
+	margin-top: 10px;
+}
+.ownmenuclick li > .megamenu form input[type="submit"] {
+	width: 25%;
+	float: right;
+	height: 30px;
+	margin-top: 10px;
+	border: none;
+	cursor: pointer;
+	background: #444;
+	color: #777;
+	-webkit-transition: background 0.3s linear;
+	-moz-transition: background 0.3s linear;
+	-o-transition: background 0.3s linear;
+	transition: background 0.3s linear;
+}
+.ownmenuclick li > .megamenu form input[type="submit"]:hover {
+	background: #e0e0e0;
+	color: #555;
+}
+/* MEGAMENU GRID 
+**********************************************************/
+.megamenu .row {
+	width: 100%;
+	margin-top: 15px;
+}
+.megamenu .row:first-child {
+	margin-top: 0;
+}
+.megamenu .row:before, .megamenu .row:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.megamenu .row:after {
+	clear: both;
+}
+.megamenu .row .col1, .megamenu .row .col2, .megamenu .row .col3, .megamenu .row .col4, .megamenu .row .col5, .megamenu .row .col6 {
+	display: block;
+	width: 100%;
+	min-height: 20px;
+	float: left;
+	margin-left: 2.127659574468085%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.megamenu .row [class*="col"]:first-child {
+	margin-left: 0;
+}
+.megamenu .row .col1 {
+	width: 14.893617021276595%;
+}
+.megamenu .row .col2 {
+	width: 31.914893617021278%;
+}
+.megamenu .row .col3 {
+	width: 48.93617021276595%;
+}
+.megamenu .row .col4 {
+	width: 65.95744680851064%;
+}
+.megamenu .row .col5 {
+	width: 82.97872340425532%;
+}
+.megamenu .row .col6 {
+	width: 100%;
+}
+/* ALINHAMENTO À DIREITA (ARTIGO DO MENU)
+**********************************************************/
+.ownmenuclick > li.right {
+	float: right;
+}
+.ownmenuclick > li.right > .megamenu, .ownmenuclick > li.right > .megamenu.half-width, .ownmenuclick > li.right > .dropdown {
+	right: 0;
+}
+/*para corrigir o atributo direito nos submenus (menu alinhado à direita) */
+.ownmenuclick > li.jsright {
+	float: right;
+}
+.ownmenuclick > li.jsright.last > .megamenu, .ownmenuclick > li.jsright.last > .megamenu.half-width, .ownmenuclick > li.jsright.last > .dropdown {
+	right: 0;
+}
+/* ICONS (FONT )
+**********************************************************/
+.ownmenuclick > li > a > i {
+	line-height: 23px !important;
+	margin-right: 6px;
+	font-size: 18px;
+	float: left;
+}
+/* COLLAPSIBLE MENU
+**********************************************************/
+.ownmenuclick > li.showhide {
+	display: none;
+	width: 100%;
+	height: 50px;
+	cursor: pointer;
+	color: #999;
+}
+.ownmenuclick > li.showhide span.title {
+	margin: 15px 0 0 25px;
+	float: left;
+}
+.ownmenuclick > li.showhide span.icon {
+	margin: 17px 20px;
+	float: right;
+}
+.ownmenuclick > li.showhide .icon em {
+	margin-bottom: 3px;
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: #999;
+}
+header nav .ownmenuclick li {
+	float: left;
+	padding: 0 15px;
+}
+header .ownmenuclick ul.dropdown {
+	padding-bottom: 0px;
+}
+header .ownmenu ul.dropdown li a {
+	text-transform: uppercase;
+	font-size: 12px;
+	border: none;
+	padding: 0px 20px;
+	line-height: 38px;
+	background: none;
+	color: #000;
+	font-size: 12px;
+	display: inline-block;
+	width: 100%;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+header .ownmenuclick ul.dropdown li a:hover {
+	background: #fff85f;
+}
+header .ownmenuclick li > .megamenu li a:hover {
+	background: #fff85f;
+}
+header nav .ownmenuclick .indicator {
+	display: none;
+}
